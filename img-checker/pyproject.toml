@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "screenshot-forensics"
+version = "0.1.0"
+description = "A Streamlit-based screenshot tamper detection tool"
+authors = ["Your Name <your@email.com>"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.8"
+streamlit = "^1.36.0"
+opencv-python = "^4.9.0.80"
+pillow = "^10.3.0"
+numpy = "^1.26.0"
+scipy = "^1.12.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.0"
+ruff = "^0.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
