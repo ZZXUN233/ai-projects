@@ -107,7 +107,7 @@ if uploaded:
 
     # ---------- 文件缓存 ----------
     saved_path = cache_uploaded_file(uploaded)
-    st.info(f"📁 已缓存到：`{saved_path}`")
+    # st.info(f"📁 已缓存到：`{saved_path}`")
 
     # ---------- 懒加载处理 ----------
     progress = st.progress(0, text="正在加载图像...")
@@ -139,7 +139,7 @@ if uploaded:
 
     # ---------- 原图 ----------
     st.subheader("原图")
-    st.image(img, width=None)
+    st.image(img, width="stretch")
 
     # ---------- 结果 ----------
     st.subheader("检测结果")
@@ -160,13 +160,13 @@ if uploaded:
     tab1, tab2, tab3, tab4 = st.tabs(["综合热力图", "ELA", "噪声分析", "边缘异常"])
 
     with tab1:
-        st.image(colorize_heatmap(fusion), caption="融合热力图", width=None)
+        st.image(colorize_heatmap(fusion), caption="融合热力图", width="stretch")
 
     with tab2:
-        st.image(colorize_heatmap(ela_h), caption="ELA 热力图", width=None)
+        st.image(colorize_heatmap(ela_h), caption="ELA 热力图", width="stretch")
 
     with tab3:
-        st.image(colorize_heatmap(noise_h), caption="噪声残差热力图", width=None)
+        st.image(colorize_heatmap(noise_h), caption="噪声残差热力图", width="stretch")
 
     with tab4:
-        st.image(colorize_heatmap(edge_h), caption="边缘不连续热力图", width=None)
+        st.image(colorize_heatmap(edge_h), caption="边缘不连续热力图", width="stretch")
